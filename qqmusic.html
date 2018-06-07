@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<title>Web player</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/index.min.css">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/qqmusic-bootstrap.min.js"></script>
+	<script src="js/popup.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5 col-sm-3 col-md-2 col-lg-2">
+					<h1>
+						<a href="javascript:;"><img src="images/player_logo.png" alt="logo"></a>
+					</h1>
+				</div>
+				<div class="col-2 col-sm-6 col-md-8 col-lg-8"></div>
+				<div class="col-5 col-sm-3 col-md-2 col-lg-2">
+					<ul>
+						<li><a href="javascript:;" class="sign-in">登录</a></li>
+						<li><a href="javascript:;" class="setup">设置</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="login-win">
+			<div class="log-in">
+				<div class="close" title="关闭"></div>
+				<div class="tab">
+					<a href="javascript:;" class="QQ">QQ登录</a><a href="javascript:;" class="WC">微信登录</a>
+				</div>
+				<div class="form">
+					<h2>账号密码登录</h2>
+					<p>推荐使用<a href="javascript:;">快速安全登录</a>,防止盗号</p>
+					<p><input type="text" placeholder="支持QQ号/邮箱/手机号登录"></p>
+					<p><input type="password" placeholder="密码"></p>
+					<p><input type="submit" value="登录"></p>
+				</div>
+				<div class="fast-login">
+					<h2>快速安全登录</h2>
+					<p>请使用<a href="javascript:;">QQ手机版</a>扫描二维码</p>
+					<p>安全登录，防止盗号</p>
+					<p><img src="images/code.jpg" alt="code"></p>
+				</div>
+				<div class="wechat">
+					<p><img src="images/weixin.jpg" alt="code"></p>
+					<p>请使用微信扫描二维码登录</p>
+					<p>"QQ音乐"</p>
+					<p>QQ与微信账号的音乐资产、付费特权不互通</p>
+				</div>
+				<div class="login-tips">
+					<p title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项"><input type="checkbox" id="tick" checked="checked"><label for="tick"></label>下次自动登录</p>
+					<ul>
+						<li><a href="#">忘了密码？</a>|</li>
+						<li><a href="#">注册新账号</a>|</li>
+						<li><a href="#">意见反馈</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-1 col-lg-1"></div>
+				<div class="m-zone col-sm-10 col-md-8 col-lg-7">
+					<div class="navbar">
+						<a href="javascript:;" class="collect"><i></i>收藏</a>
+						<a href="javascript:;" class='add'><i></i>添加到</a>
+						<a href="javascript:;" class="down"><i></i>下载</a>
+						<a href="javascript:;" class="delete"><i></i>删除</a>
+						<a href="javascript:;" class="empty"><i></i>清空列表</a>
+					</div>
+
+					<div class="m-lists">
+						<div class="s-title">
+							<span class="square"></span>
+							<div class="row">
+								<div class="s-name col-7 col-md-7">
+									<i class="s-num"></i>
+									<p class="song">歌曲</p>
+								</div>
+								<div class="s-singer col-3 col-md-3">歌手</div>
+								<div class="s-time col-2 col-md-2">时长</div>
+							</div>
+						</div>
+
+						<ul class="s-lists" data-mcs-theme="minimal">
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="m-lyric col-md-4 col-lg-3">
+					<div class="cover">
+						<a href="javascript:;">
+							<img src="images/cover10.png" alt="cover">
+						</a>
+					</div>
+					<div class="m-info">
+						<p>歌曲名: <a href="javascript: ;" class="curName"></a></p>
+						<p>歌手名: <a href="javascript: ;" class="curSinger"></a></p>
+						<p>专辑名: <a href="javascript: ;" class="album"></a></p>
+					</div>
+					<div class="m-lrc">
+						<div>
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1 col-lg-1"></div>
+			</div>
+		</div>
+		<div class="popup-win">
+			<div class="del-win">
+				<div class="win-t">
+					<h2>QQ Music</h2>
+				</div>
+				<div class="win-c">
+					<p class="remove">Are you sure to delete the song(s)?</p>
+					<p class="clear">Are you sure to clear the song lists?</p>
+				</div>
+				<div class="win-b">
+					<button class="btn-del">Delete</button><button class="btn-cel">Cancel</button>
+				</div>
+				<span class="delkey" title="close"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-1 col-sm-2 col-lg-1"></div>
+				<div class="control-bar col-sm-8 col-md-12 col-lg-11">
+					<div class="row">
+						<div class="play-key col-md-2 col-lg-2">
+							<a href="javascript:;" class="pre" title="上一首"></a>
+							<a href="javascript:;" class="pause" title="播放"></a>
+							<a href="javascript:;" class="next" title="下一首"></a>
+						</div>
+
+						<div class="p-bar col-md-4 col-lg-5">
+							<div class="up">
+								<span class="upl">
+									<a href="javascript:;" class="curName"></a> - <a href="javascript:;" class="curSinger"></a>
+								</span>
+								<span class="upr"><i class="ct">00:00</i> / <i class="tt">00:00</i></span>
+							</div>
+							<div class="bot">
+								<div class="progress" style="height: 3px;">
+								  <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>	
+								<div class="dot"></div>
+							</div>
+						</div>
+
+						<div class="collections col-md-6 col-lg-5">
+							<div class="volume">
+								<a href="javascript:;" class="horn"></a>
+								<div class="volume-progress">
+									<div class="progress" style="height: 3px;">
+									  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+									<div class="vol-dot"></div>
+								</div>
+							</div>
+							<a href="javascript:;" class="mode mode0"></a>
+							<a href="javascript:;" class="dislike"></a>
+							<a href="javascript:;" class="download"></a>
+							<a href="javascript:;" class="comment"></a>
+							<a href="javascript:;" class="pure"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-1 col-sm-2"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mask-bg"></div>
+	<div class="mask"></div>
+	<audio src=""></audio>
+</body>
+</html>
