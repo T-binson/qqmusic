@@ -5,14 +5,10 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-compatible" content="IE=edge">
 	<title>Web player</title>
-	<link rel="shortcut icon" href="../images/favicon.ico">
-	<link rel="stylesheet" href="bootstrap.css">
-	<link rel="stylesheet" href="../jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" href="index.css">
-	<script src="../jquery-1.12.4.min.js"></script>
-	<script src="../jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="qqmusic-bootstrap.js"></script>
-	<script src="popup.min.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/index.min.css">
 </head>
 <body>
 	<div class="header">
@@ -20,7 +16,7 @@
 			<div class="row">
 				<div class="col-4 col-sm-3 col-md-2 col-lg-2">
 					<h1>
-						<a href="javascript:;"><img src="../images/player_logo.png" alt="logo"></a>
+						<a href="javascript:;"><img src="images/player_logo.png" alt="logo"></a>
 					</h1>
 				</div>
 				<div class="col-4 col-sm-6 col-md-8 col-lg-8" style="padding: 0px">
@@ -28,10 +24,7 @@
 						<div class="searchbox">
 							<input class="keywords" type="search" placeholder="请输入搜索信息"><i class="searchbtn"></i>
 						</div>
-
-						<ul class="searchlist">
-							
-						</ul>
+						<ul class="searchlist"></ul>
 					</div>
 				</div>
 				<div class="col-4 col-sm-3 col-md-2 col-lg-2">
@@ -59,10 +52,10 @@
 					<h2>快速安全登录</h2>
 					<p>请使用<a href="javascript:;">QQ手机版</a>扫描二维码</p>
 					<p>安全登录，防止盗号</p>
-					<p><img src="../images/code.jpg" alt="code"></p>
+					<p><img src="images/code.jpg" alt="code"></p>
 				</div>
 				<div class="wechat">
-					<p><img src="../images/weixin.jpg" alt="code"></p>
+					<p><img src="images/weixin.jpg" alt="code"></p>
 					<p>请使用微信扫描二维码登录</p>
 					<p>"QQ音乐"</p>
 					<p>QQ与微信账号的音乐资产、付费特权不互通</p>
@@ -78,7 +71,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="main">
 		<div class="container-fluid">
 			<div class="row">
@@ -91,7 +83,6 @@
 						<a href="javascript:;" class="delete" title="delete"><i></i>删除</a>
 						<a href="javascript:;" class="empty" title="clear"><i></i>清空</a>
 					</div>
-
 					<div class="m-lists">
 						<div class="s-title">
 							<span class="square"></span>
@@ -104,23 +95,18 @@
 								<div class="s-time col-2 col-md-2">时长</div>
 							</div>
 						</div>
-
-						<ul class="s-lists" data-mcs-theme="minimal">
-							
+						<ul class="s-lists" data-mcs-theme="minimal">	
 						</ul>
 						<ul class="new-lists" data-mcs-theme="minimal">
-							
 						</ul>
 						<ul class="rem-lists" data-mcs-theme="minimal">
-							
 						</ul>
 					</div>
 				</div>
-
 				<div class="m-lyric col-md-4 col-lg-3">
 					<div class="cover">
 						<a href="javascript:;">
-							<img src="../images/cover10.png" alt="cover">
+							<img src="images/cover10.png" alt="cover">
 						</a>
 					</div>
 					<div class="m-info">
@@ -154,7 +140,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="footer">
 		<div class="container-fluid">
 			<div class="row">
@@ -166,7 +151,6 @@
 							<a href="javascript:;" class="pause" title="播放/暂停"></a>
 							<a href="javascript:;" class="next" title="下一首"></a>
 						</div>
-
 						<div class="p-bar col-md-4 col-lg-5">
 							<div class="up">
 								<span class="upl">
@@ -182,7 +166,6 @@
 								<div class="dot"></div>
 							</div>
 						</div>
-
 						<div class="collections col-md-6 col-lg-5">
 							<div class="volume">
 								<a href="javascript:;" class="horn"></a>
@@ -205,9 +188,12 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="mask-bg"></div>
 	<div class="mask"></div>
 	<audio src=""></audio>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/qqmusic-bootstrap.min.js"></script>
+<script src="js/popup.min.js"></script>
 </body>
 </html>
